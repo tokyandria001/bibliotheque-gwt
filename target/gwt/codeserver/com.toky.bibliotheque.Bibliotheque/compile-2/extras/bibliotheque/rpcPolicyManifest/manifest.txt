@@ -1,3 +1,4 @@
 # Module bibliotheque
 # RPC service class, partial path of RPC policy file
 com.toky.bibliotheque.GreetingService, 2B2500F9E056EB07636AB5581D06B1F0.gwt.rpc
+com.toky.bibliotheque.LivreService, DFCF81B4E61AC42A37D814A90802C6AE.gwt.rpc

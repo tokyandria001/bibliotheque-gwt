@@ -13,6 +13,16 @@
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/bibliotheque/greet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>livreServlet</servlet-name>
+    <servlet-class>com.toky.bibliotheque.LivreServiceImpl</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>livreServlet</servlet-name>
+    <url-pattern>/bibliotheque/livres</url-pattern>
+  </servlet-mapping>
 
 	<!-- Default page to serve -->
   <welcome-file-list>
