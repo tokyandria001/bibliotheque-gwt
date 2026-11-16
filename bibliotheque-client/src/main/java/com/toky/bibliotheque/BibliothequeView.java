@@ -27,6 +27,7 @@ public class BibliothequeView extends Composite implements LivresPresenter.Displ
     @UiField Button boutonAjouter;
 
     private LivresPresenter presenter;
+    private final LivreFormDialog formulaire = new LivreFormDialog();
 
     public BibliothequeView() {
         initWidget(BINDER.createAndBindUi(this));
@@ -64,6 +65,21 @@ public class BibliothequeView extends Composite implements LivresPresenter.Displ
     @Override
     public void afficherMessage(String message) {
         Window.alert(message);
+    }
+
+    @Override
+    public void ouvrirFormulaire() {
+        formulaire.ouvrir(livre -> presenter.onEnregistrer(livre));
+    }
+
+    @Override
+    public void fermerFormulaire() {
+        formulaire.fermer();
+    }
+
+    @Override
+    public void afficherErreurFormulaire(String message) {
+        formulaire.afficherErreur(message);
     }
 
     // ===== Événements : on délègue au presenter =====

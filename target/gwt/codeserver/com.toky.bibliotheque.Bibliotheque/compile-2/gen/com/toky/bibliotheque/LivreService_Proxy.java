@@ -13,7 +13,7 @@ import com.google.gwt.user.client.rpc.impl.RpcStatsContext;
 
 public class LivreService_Proxy extends RemoteServiceProxy implements com.toky.bibliotheque.LivreServiceAsync {
   private static final String REMOTE_SERVICE_INTERFACE_NAME = "com.toky.bibliotheque.LivreService";
-  private static final String SERIALIZATION_POLICY ="DFCF81B4E61AC42A37D814A90802C6AE";
+  private static final String SERIALIZATION_POLICY ="37A00C57B24CB2B5C370E4861E8E0CDD";
   private static final com.toky.bibliotheque.LivreService_TypeSerializer SERIALIZER = new com.toky.bibliotheque.LivreService_TypeSerializer();
   
   public LivreService_Proxy() {
@@ -21,6 +21,18 @@ public class LivreService_Proxy extends RemoteServiceProxy implements com.toky.b
       "livres", 
       SERIALIZATION_POLICY, 
       SERIALIZER);
+  }
+  
+  public void ajouterLivre(com.toky.bibliotheque.Livre livre, com.google.gwt.user.client.rpc.AsyncCallback callback) {
+    com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper helper = new com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper("LivreService_Proxy", "ajouterLivre");
+    try {
+      SerializationStreamWriter streamWriter = helper.start(REMOTE_SERVICE_INTERFACE_NAME, 1);
+      streamWriter.writeString("com.toky.bibliotheque.Livre/3208369158");
+      streamWriter.writeObject(livre);
+      helper.finish(callback, ResponseReader.OBJECT);
+    } catch (SerializationException ex) {
+      callback.onFailure(ex);
+    }
   }
   
   public void getLivres(com.google.gwt.user.client.rpc.AsyncCallback callback) {

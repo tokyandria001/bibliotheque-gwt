@@ -40,6 +40,7 @@ public class LivreService_TypeSerializer extends com.google.gwt.user.client.rpc.
     result["com.toky.bibliotheque.Livre/3208369158"] = [
         @com.toky.bibliotheque.Livre_FieldSerializer::instantiate(Lcom/google/gwt/user/client/rpc/SerializationStreamReader;),
         @com.toky.bibliotheque.Livre_FieldSerializer::deserialize(Lcom/google/gwt/user/client/rpc/SerializationStreamReader;Lcom/toky/bibliotheque/Livre;),
+        @com.toky.bibliotheque.Livre_FieldSerializer::serialize(Lcom/google/gwt/user/client/rpc/SerializationStreamWriter;Lcom/toky/bibliotheque/Livre;)
       ];
     
     result["[Lcom.toky.bibliotheque.Livre;/1639049385"] = [
@@ -47,9 +48,20 @@ public class LivreService_TypeSerializer extends com.google.gwt.user.client.rpc.
         @com.toky.bibliotheque.Livre_Array_Rank_1_FieldSerializer::deserialize(Lcom/google/gwt/user/client/rpc/SerializationStreamReader;[Lcom/toky/bibliotheque/Livre;),
       ];
     
+    result["java.lang.IllegalArgumentException/1755012560"] = [
+        @com.google.gwt.user.client.rpc.core.java.lang.IllegalArgumentException_FieldSerializer::instantiate(Lcom/google/gwt/user/client/rpc/SerializationStreamReader;),
+        @com.google.gwt.user.client.rpc.core.java.lang.IllegalArgumentException_FieldSerializer::deserialize(Lcom/google/gwt/user/client/rpc/SerializationStreamReader;Ljava/lang/IllegalArgumentException;),
+      ];
+    
     result["java.lang.Long/4227064769"] = [
         @com.google.gwt.user.client.rpc.core.java.lang.Long_CustomFieldSerializer::instantiate(Lcom/google/gwt/user/client/rpc/SerializationStreamReader;),
         @com.google.gwt.user.client.rpc.core.java.lang.Long_CustomFieldSerializer::deserialize(Lcom/google/gwt/user/client/rpc/SerializationStreamReader;Ljava/lang/Long;),
+        @com.google.gwt.user.client.rpc.core.java.lang.Long_CustomFieldSerializer::serialize(Lcom/google/gwt/user/client/rpc/SerializationStreamWriter;Ljava/lang/Long;)
+      ];
+    
+    result["java.lang.NumberFormatException/3305228476"] = [
+        @com.google.gwt.user.client.rpc.core.java.lang.NumberFormatException_FieldSerializer::instantiate(Lcom/google/gwt/user/client/rpc/SerializationStreamReader;),
+        @com.google.gwt.user.client.rpc.core.java.lang.NumberFormatException_FieldSerializer::deserialize(Lcom/google/gwt/user/client/rpc/SerializationStreamReader;Ljava/lang/NumberFormatException;),
       ];
     
     result["java.lang.String/2004016611"] = [
@@ -105,7 +117,9 @@ public class LivreService_TypeSerializer extends com.google.gwt.user.client.rpc.
     result[@javaemul.internal.HashCodes::getObjectIdentityHashCode(*)(@com.google.gwt.user.client.rpc.XsrfToken::class)] = "com.google.gwt.user.client.rpc.XsrfToken/4254043109";
     result[@javaemul.internal.HashCodes::getObjectIdentityHashCode(*)(@com.toky.bibliotheque.Livre::class)] = "com.toky.bibliotheque.Livre/3208369158";
     result[@javaemul.internal.HashCodes::getObjectIdentityHashCode(*)(@com.toky.bibliotheque.Livre[]::class)] = "[Lcom.toky.bibliotheque.Livre;/1639049385";
+    result[@javaemul.internal.HashCodes::getObjectIdentityHashCode(*)(@java.lang.IllegalArgumentException::class)] = "java.lang.IllegalArgumentException/1755012560";
     result[@javaemul.internal.HashCodes::getObjectIdentityHashCode(*)(@java.lang.Long::class)] = "java.lang.Long/4227064769";
+    result[@javaemul.internal.HashCodes::getObjectIdentityHashCode(*)(@java.lang.NumberFormatException::class)] = "java.lang.NumberFormatException/3305228476";
     result[@javaemul.internal.HashCodes::getObjectIdentityHashCode(*)(@java.lang.String::class)] = "java.lang.String/2004016611";
     result[@javaemul.internal.HashCodes::getObjectIdentityHashCode(*)(@java.util.ArrayList::class)] = "java.util.ArrayList/4159755760";
     result[@javaemul.internal.HashCodes::getObjectIdentityHashCode(*)(@java.util.Arrays.ArrayList::class)] = "java.util.Arrays$ArrayList/2507071751";

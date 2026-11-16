@@ -5,6 +5,7 @@ import com.google.gwt.user.server.rpc.jakarta.RemoteServiceServlet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * Implémentation serveur du service des livres.
@@ -13,8 +14,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @SuppressWarnings("serial")
 public class LivreServiceImpl extends RemoteServiceServlet implements LivreService {
 
-    // Liste thread-safe : plusieurs utilisateurs peuvent appeler le service en même temps
     private final List<Livre> livres = new CopyOnWriteArrayList<>();
+    private final AtomicLong prochainId = new AtomicLong(5);
 
     public LivreServiceImpl() {
         livres.add(new Livre(1L, "Le Petit Prince", "Antoine de Saint-Exupéry", 1943, true));
@@ -25,7 +26,18 @@ public class LivreServiceImpl extends RemoteServiceServlet implements LivreServi
 
     @Override
     public List<Livre> getLivres() {
-        // On renvoie une copie : le client ne doit jamais modifier la liste du serveur
         return new ArrayList<>(livres);
+    }
+
+    @Override
+    public Livre ajouterLivre(Livre livre) throws IllegalArgumentException {
+        // Validation côté serveur (mêmes règles que côté client)
+        String erreur = LivreValidator.valider(livre);
+        if (erreur != null) {
+            throw new IllegalArgumentException(erreur);
+        }
+        livre.setId(prochainId.getAndIncrement());
+        livres.add(livre);
+        return livre;
     }
 }
