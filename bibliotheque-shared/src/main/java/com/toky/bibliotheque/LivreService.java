@@ -9,4 +9,6 @@ import java.util.List;
 public interface LivreService extends RemoteService {
     List<Livre> getLivres();
     Livre ajouterLivre(Livre livre) throws IllegalArgumentException;
+    Livre modifierLivre(Livre livre) throws IllegalArgumentException;
+    void supprimerLivre(Long id);
 }

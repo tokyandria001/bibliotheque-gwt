@@ -11,7 +11,9 @@ public class LivresPresenter {
         void setPresenter(LivresPresenter presenter);
         void afficherLivres(List<Livre> livres);
         void afficherMessage(String message);
-        void ouvrirFormulaire();
+        boolean confirmer(String question);
+        /** @param livre le livre à modifier, ou null pour un ajout */
+        void ouvrirFormulaire(Livre livre);
         void fermerFormulaire();
         void afficherErreurFormulaire(String message);
     }
@@ -43,30 +45,58 @@ public class LivresPresenter {
         });
     }
 
+    // ===== Actions de l'utilisateur =====
+
     public void onAjouterClique() {
-        view.ouvrirFormulaire();
+        view.ouvrirFormulaire(null);
+    }
+
+    public void onModifierClique(Livre livre) {
+        view.ouvrirFormulaire(livre);
+    }
+
+    public void onSupprimerClique(Livre livre) {
+        if (!view.confirmer("Supprimer « " + livre.getTitre() + " » ?")) {
+            return;
+        }
+        service.supprimerLivre(livre.getId(), new AsyncCallback<Void>() {
+            @Override
+            public void onSuccess(Void rien) {
+                chargerLivres();
+            }
+
+            @Override
+            public void onFailure(Throwable erreur) {
+                view.afficherMessage("Suppression impossible : " + erreur.getMessage());
+            }
+        });
     }
 
     public void onEnregistrer(Livre livre) {
-        // 1) Validation côté client : réponse immédiate, sans appel serveur
         String erreur = LivreValidator.valider(livre);
         if (erreur != null) {
             view.afficherErreurFormulaire(erreur);
             return;
         }
 
-        // 2) Envoi au serveur
-        service.ajouterLivre(livre, new AsyncCallback<Livre>() {
+        AsyncCallback<Livre> callback = new AsyncCallback<Livre>() {
             @Override
-            public void onSuccess(Livre ajoute) {
+            public void onSuccess(Livre resultat) {
                 view.fermerFormulaire();
-                chargerLivres(); // on rafraîchit le tableau
+                chargerLivres();
             }
 
             @Override
             public void onFailure(Throwable erreur) {
                 view.afficherErreurFormulaire(erreur.getMessage());
             }
-        });
+        };
+
+        // Pas d'id = nouveau livre ; sinon = modification
+        if (livre.getId() == null) {
+            service.ajouterLivre(livre, callback);
+        } else {
+            service.modifierLivre(livre, callback);
+        }
     }
 }

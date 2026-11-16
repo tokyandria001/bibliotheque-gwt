@@ -1,13 +1,13 @@
 binding: user.agent=safari
 Compiling module com.toky.bibliotheque.Bibliotheque
-   Unification traversed 2352 fields and methods and 1002 types. 54 are considered part of the current module and 70 had all of their fields and methods traversed.
+   Unification traversed 1166 fields and methods and 671 types. 26 are considered part of the current module and 34 had all of their fields and methods traversed.
    Compiling 1 permutation
       Compiling permutation 0...
-      Linking per-type JS with 54 new/changed types.
+      Linking per-type JS with 26 new/changed types.
       Source Maps Enabled
    Compile of permutations succeeded
-   Compilation succeeded -- 9,606s
+   Compilation succeeded -- 7,184s
 Linking into C:\Users\toky8\projets\bibliotheque\target\gwt\codeserver\com.toky.bibliotheque.Bibliotheque\compile-2\war\bibliotheque; Writing extras to C:\Users\toky8\projets\bibliotheque\target\gwt\codeserver\com.toky.bibliotheque.Bibliotheque\compile-2\extras\bibliotheque
    Link succeeded
-   Linking succeeded -- 0,637s
-11,209s total -- Compile completed
+   Linking succeeded -- 0,678s
+8,990s total -- Compile completed

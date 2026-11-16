@@ -7,4 +7,6 @@ import java.util.List;
 public interface LivreServiceAsync {
     void getLivres(AsyncCallback<List<Livre>> callback);
     void ajouterLivre(Livre livre, AsyncCallback<Livre> callback);
+    void modifierLivre(Livre livre, AsyncCallback<Livre> callback);
+    void supprimerLivre(Long id, AsyncCallback<Void> callback);
 }

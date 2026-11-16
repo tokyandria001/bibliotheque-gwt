@@ -50,6 +50,14 @@ public class LivreEntity {
         return new Livre(id, titre, auteur, annee, disponible);
     }
 
+        /** Met à jour l'entité avec les valeurs du DTO (l'id ne change pas). */
+    public void mettreAJour(Livre livre) {
+        this.titre = livre.getTitre();
+        this.auteur = livre.getAuteur();
+        this.annee = livre.getAnnee();
+        this.disponible = livre.isDisponible();
+    }
+
     public Long getId() {
         return id;
     }

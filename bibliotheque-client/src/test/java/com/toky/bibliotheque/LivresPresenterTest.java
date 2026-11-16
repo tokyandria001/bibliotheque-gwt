@@ -19,6 +19,7 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import static org.mockito.Mockito.when;
 
 /**
  * Tests unitaires du presenter : la vue et le service sont remplacés par des mocks.
@@ -84,7 +85,7 @@ class LivresPresenterTest {
     void ajouterOuvreLeFormulaire() {
         presenter.onAjouterClique();
 
-        verify(view).ouvrirFormulaire();
+        verify(view).ouvrirFormulaire(null);
     }
 
     @Test
@@ -124,5 +125,51 @@ class LivresPresenterTest {
 
         verify(view).afficherErreurFormulaire("Erreur côté serveur");
         verify(view, never()).fermerFormulaire();
+    }
+
+        @Test
+    @DisplayName("Le clic sur Modifier ouvre le formulaire avec le livre")
+    void modifierOuvreLeFormulairePrerempli() {
+        Livre livre = new Livre(3L, "Germinal", "Émile Zola", 1885, true);
+
+        presenter.onModifierClique(livre);
+
+        verify(view).ouvrirFormulaire(livre);
+    }
+
+    @Test
+    @DisplayName("Un livre avec id est envoyé en modification (et non en ajout)")
+    void livreAvecIdEstModifie() {
+        Livre livre = new Livre(3L, "Germinal", "Émile Zola", 1885, false);
+
+        presenter.onEnregistrer(livre);
+
+        verify(service).modifierLivre(eq(livre), callbackAjout.capture());
+        verify(service, never()).ajouterLivre(any(), any());
+
+        callbackAjout.getValue().onSuccess(livre);
+        verify(view).fermerFormulaire();
+    }
+
+    @Test
+    @DisplayName("Suppression confirmée : le service est appelé")
+    void suppressionConfirmee() {
+        Livre livre = new Livre(3L, "Germinal", "Émile Zola", 1885, true);
+        when(view.confirmer(any())).thenReturn(true);
+
+        presenter.onSupprimerClique(livre);
+
+        verify(service).supprimerLivre(eq(3L), any());
+    }
+
+    @Test
+    @DisplayName("Suppression annulée : le service n'est PAS appelé")
+    void suppressionAnnulee() {
+        Livre livre = new Livre(3L, "Germinal", "Émile Zola", 1885, true);
+        when(view.confirmer(any())).thenReturn(false);
+
+        presenter.onSupprimerClique(livre);
+
+        verify(service, never()).supprimerLivre(any(), any());
     }
 }

@@ -44,6 +44,30 @@ public class LivreService_Proxy extends RemoteServiceProxy implements com.toky.b
       callback.onFailure(ex);
     }
   }
+  
+  public void modifierLivre(com.toky.bibliotheque.Livre livre, com.google.gwt.user.client.rpc.AsyncCallback callback) {
+    com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper helper = new com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper("LivreService_Proxy", "modifierLivre");
+    try {
+      SerializationStreamWriter streamWriter = helper.start(REMOTE_SERVICE_INTERFACE_NAME, 1);
+      streamWriter.writeString("com.toky.bibliotheque.Livre/3208369158");
+      streamWriter.writeObject(livre);
+      helper.finish(callback, ResponseReader.OBJECT);
+    } catch (SerializationException ex) {
+      callback.onFailure(ex);
+    }
+  }
+  
+  public void supprimerLivre(java.lang.Long id, com.google.gwt.user.client.rpc.AsyncCallback callback) {
+    com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper helper = new com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper("LivreService_Proxy", "supprimerLivre");
+    try {
+      SerializationStreamWriter streamWriter = helper.start(REMOTE_SERVICE_INTERFACE_NAME, 1);
+      streamWriter.writeString("java.lang.Long/4227064769");
+      streamWriter.writeObject(id);
+      helper.finish(callback, ResponseReader.VOID);
+    } catch (SerializationException ex) {
+      callback.onFailure(ex);
+    }
+  }
   @Override
   public SerializationStreamWriter createStreamWriter() {
     ClientSerializationStreamWriter toReturn =

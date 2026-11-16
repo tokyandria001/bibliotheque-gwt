@@ -1,2 +1,0 @@
-serviceClass: com.toky.bibliotheque.GreetingService
-path: 2B2500F9E056EB07636AB5581D06B1F0.gwt.rpc

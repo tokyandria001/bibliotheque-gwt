@@ -13,14 +13,13 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 
 /**
- * Boîte de dialogue de saisie d'un livre (composant de la vue).
+ * Boîte de dialogue de saisie d'un livre : sert à l'ajout ET à la modification.
  */
 public class LivreFormDialog {
 
     interface Binder extends UiBinder<DialogBox, LivreFormDialog> {}
     private static final Binder BINDER = GWT.create(Binder.class);
 
-    /** Appelé quand l'utilisateur clique sur "Enregistrer". */
     public interface Listener {
         void onEnregistrer(Livre livre);
     }
@@ -35,18 +34,28 @@ public class LivreFormDialog {
 
     private final DialogBox dialog;
     private Listener listener;
+    private Long idEnCours; // null = ajout, sinon = modification
 
     public LivreFormDialog() {
         dialog = BINDER.createAndBindUi(this);
     }
 
-    public void ouvrir(Listener listener) {
+    /**
+     * @param livre le livre à modifier, ou null pour un ajout
+     */
+    public void ouvrir(Livre livre, Listener listener) {
         this.listener = listener;
-        champTitre.setValue("");
-        champAuteur.setValue("");
-        champAnnee.setValue(null);
-        champDisponible.setValue(true);
+        boolean modification = livre != null;
+
+        dialog.setText(modification ? "Modifier un livre" : "Ajouter un livre");
+        idEnCours = modification ? livre.getId() : null;
+
+        champTitre.setValue(modification ? livre.getTitre() : "");
+        champAuteur.setValue(modification ? livre.getAuteur() : "");
+        champAnnee.setValue(modification ? livre.getAnnee() : null);
+        champDisponible.setValue(modification ? livre.isDisponible() : true);
         messageErreur.setText("");
+
         dialog.center();
         champTitre.setFocus(true);
     }
@@ -68,7 +77,7 @@ public class LivreFormDialog {
     void onEnregistrer(ClickEvent event) {
         Integer annee = champAnnee.getValue();
         Livre livre = new Livre(
-            null,
+            idEnCours,
             champTitre.getValue().trim(),
             champAuteur.getValue().trim(),
             annee == null ? 0 : annee,

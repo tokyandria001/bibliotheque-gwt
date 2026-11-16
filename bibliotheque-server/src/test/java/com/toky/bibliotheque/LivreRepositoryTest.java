@@ -74,4 +74,28 @@ class LivreRepositoryTest {
     void listeCompatibleGwtRpc() {
         assertEquals(ArrayList.class, repository.trouverTous().getClass());
     }
+
+        @Test
+    @DisplayName("Modifier un livre met à jour la base")
+    void modifierMetAJour() {
+        Livre ajoute = repository.ajouter(new Livre(null, "Titre initial", "Auteur", 2000, true));
+
+        ajoute.setTitre("Titre modifié");
+        ajoute.setDisponible(false);
+        repository.modifier(ajoute);
+
+        Livre relu = repository.trouverTous().get(0);
+        assertEquals("Titre modifié", relu.getTitre());
+        assertEquals(false, relu.isDisponible());
+    }
+
+    @Test
+    @DisplayName("Supprimer un livre le retire de la base")
+    void supprimerRetireLeLivre() {
+        Livre ajoute = repository.ajouter(new Livre(null, "À supprimer", "Auteur", 2000, true));
+
+        repository.supprimer(ajoute.getId());
+
+        assertEquals(0, repository.compter());
+    }
 }

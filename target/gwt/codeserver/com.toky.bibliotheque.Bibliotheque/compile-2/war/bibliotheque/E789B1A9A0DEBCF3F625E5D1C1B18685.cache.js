@@ -1,4 +1,4 @@
-var $wnd = $wnd || window.parent;var __gwtModuleFunction = $wnd.bibliotheque;var $sendStats = __gwtModuleFunction.__sendStats;$sendStats('moduleStartup', 'moduleEvalStart');var $gwt_version = "2.13.1";var $strongName = '67EC9788533A5AAB2BCB20231DE11CFC';var $gwt = {};var $doc = $wnd.document;var $moduleName, $moduleBase;function __gwtStartLoadingFragment(frag) {var fragFile = 'deferredjs/' + $strongName + '/' + frag + '.cache.js';return __gwtModuleFunction.__startLoadingFragment(fragFile);}function __gwtInstallCode(code) {return __gwtModuleFunction.__installRunAsyncCode(code);}function __gwt_isKnownPropertyValue(propName, propValue) {return __gwtModuleFunction.__gwt_isKnownPropertyValue(propName, propValue);}function __gwt_getMetaProperty(name) {return __gwtModuleFunction.__gwt_getMetaProperty(name);}var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent && $wnd.__gwtStatsEvent(a);} : null;var $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;var _, prototypesByTypeId_1_g$, initFnList_1_g$, PERMUTATION_NOT_SET_0_g$ = -1, permutationId_0_g$ = -1;
+var $wnd = $wnd || window.parent;var __gwtModuleFunction = $wnd.bibliotheque;var $sendStats = __gwtModuleFunction.__sendStats;$sendStats('moduleStartup', 'moduleEvalStart');var $gwt_version = "2.13.1";var $strongName = 'E789B1A9A0DEBCF3F625E5D1C1B18685';var $gwt = {};var $doc = $wnd.document;var $moduleName, $moduleBase;function __gwtStartLoadingFragment(frag) {var fragFile = 'deferredjs/' + $strongName + '/' + frag + '.cache.js';return __gwtModuleFunction.__startLoadingFragment(fragFile);}function __gwtInstallCode(code) {return __gwtModuleFunction.__installRunAsyncCode(code);}function __gwt_isKnownPropertyValue(propName, propValue) {return __gwtModuleFunction.__gwt_isKnownPropertyValue(propName, propValue);}function __gwt_getMetaProperty(name) {return __gwtModuleFunction.__gwt_getMetaProperty(name);}var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent && $wnd.__gwtStatsEvent(a);} : null;var $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;var _, prototypesByTypeId_1_g$, initFnList_1_g$, PERMUTATION_NOT_SET_0_g$ = -1, permutationId_0_g$ = -1;
 function dwc_g$(){
   if (!(permutationId_0_g$ != -1)) {
     debugger;
@@ -7820,6 +7820,64 @@ _.render_5_g$ = function slf_g$(context_0_g$, data_0_g$, sb_0_g$){
 }
 ;
 var Lcom_google_gwt_cell_client_AbstractSafeHtmlCell_2_classLit_0_g$ = mOd_g$('com.google.gwt.cell.client', 'AbstractSafeHtmlCell', 2141, Lcom_google_gwt_cell_client_AbstractCell_2_classLit_0_g$);
+function i8f_g$(){
+  i8f_g$ = Object;
+  nlf_g$();
+}
+
+function k8f_g$(){
+  i8f_g$();
+  l8f_g$.call(this, Qqf_g$());
+}
+
+function l8f_g$(renderer_0_g$){
+  i8f_g$();
+  qlf_g$.call(this, renderer_0_g$, Ntc_g$(xtc_g$(Ljava_lang_String_2_classLit_0_g$, 1), {1463:1, 1464:1, 1485:1, 1492:1, 1495:1, 1:1, 1528:1, 1547:1}, 2, 6, [ovc_g$('click'), ovc_g$('keydown')]));
+  this.$init_1652_g$();
+}
+
+Jxc_g$(2388, 2141, {2140:1, 2141:1, 2388:1, 2142:1, 1:1}, k8f_g$, l8f_g$);
+_.$init_1652_g$ = function j8f_g$(){
+  i8f_g$();
+}
+;
+_.onBrowserEvent_1_g$ = function m8f_g$(context_0_g$, parent_0_g$, value_0_g$, event_0_g$, valueUpdater_0_g$){
+  this.onBrowserEvent_5_g$(context_0_g$, parent_0_g$, ovc_g$(value_0_g$), event_0_g$, valueUpdater_0_g$);
+}
+;
+_.onEnterKeyDown_0_g$ = function o8f_g$(context_0_g$, parent_0_g$, value_0_g$, event_0_g$, valueUpdater_0_g$){
+  this.onEnterKeyDown_1_g$(context_0_g$, parent_0_g$, ovc_g$(value_0_g$), event_0_g$, valueUpdater_0_g$);
+}
+;
+_.onBrowserEvent_5_g$ = function n8f_g$(context_0_g$, parent_0_g$, value_0_g$, event_0_g$, valueUpdater_0_g$){
+  var eventTarget_0_g$;
+  Mxc_g$(2140).onBrowserEvent_1_g$.call(this, context_0_g$, parent_0_g$, value_0_g$, event_0_g$, valueUpdater_0_g$);
+  if (BXd_g$(ovc_g$('click'), vDb_g$(event_0_g$))) {
+    eventTarget_0_g$ = iDb_g$(event_0_g$);
+    if (!iib_g$(eventTarget_0_g$)) {
+      return;
+    }
+    if (Yeb_g$(Wfb_g$(parent_0_g$), ghb_g$(eventTarget_0_g$))) {
+      this.onEnterKeyDown_1_g$(context_0_g$, parent_0_g$, value_0_g$, event_0_g$, valueUpdater_0_g$);
+    }
+  }
+}
+;
+_.onEnterKeyDown_1_g$ = function p8f_g$(context_0_g$, parent_0_g$, value_0_g$, event_0_g$, valueUpdater_0_g$){
+  if (Lvc_g$(valueUpdater_0_g$)) {
+    valueUpdater_0_g$.update_2_g$(value_0_g$);
+  }
+}
+;
+_.render_6_g$ = function q8f_g$(context_0_g$, data_0_g$, sb_0_g$){
+  sb_0_g$.appendHtmlConstant_0_g$('<button type="button" tabindex="-1">');
+  if (Lvc_g$(data_0_g$)) {
+    sb_0_g$.append_7_g$(data_0_g$);
+  }
+  sb_0_g$.appendHtmlConstant_0_g$('<\/button>');
+}
+;
+var Lcom_google_gwt_cell_client_ButtonCell_2_classLit_0_g$ = mOd_g$('com.google.gwt.cell.client', 'ButtonCell', 2388, Lcom_google_gwt_cell_client_AbstractSafeHtmlCell_2_classLit_0_g$);
 function tlf_g$(){
   tlf_g$ = Object;
 }
@@ -7870,6 +7928,11 @@ _.column_1_g$ = 0;
 _.index_7_g$ = 0;
 _.subindex_1_g$ = 0;
 var Lcom_google_gwt_cell_client_Cell$Context_2_classLit_0_g$ = mOd_g$('com.google.gwt.cell.client', 'Cell/Context', 2143, Ljava_lang_Object_2_classLit_0_g$);
+function Clf_g$(){
+  Clf_g$ = Object;
+}
+
+var Lcom_google_gwt_cell_client_FieldUpdater_2_classLit_0_g$ = oOd_g$('com.google.gwt.cell.client', 'FieldUpdater');
 function Dlf_g$(){
   Dlf_g$ = Object;
 }
@@ -27043,6 +27106,36 @@ _.toSafeHtml_0_g$ = function TCc_g$(){
 }
 ;
 var Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2_classLit_0_g$ = mOd_g$('com.google.gwt.safehtml.shared', 'SafeHtmlBuilder', 1019, Ljava_lang_Object_2_classLit_0_g$);
+function UCc_g$(){
+  UCc_g$ = Object;
+  a_g$();
+}
+
+function WCc_g$(){
+  UCc_g$();
+  i_g$.call(this);
+  this.$init_653_g$();
+}
+
+function XCc_g$(html_0_g$){
+  UCc_g$();
+}
+
+function YCc_g$(check_0_g$){
+  UCc_g$();
+}
+
+function ZCc_g$(){
+  UCc_g$();
+}
+
+Jxc_g$(1020, 1, {1020:1, 1:1}, WCc_g$);
+_.$init_653_g$ = function VCc_g$(){
+  UCc_g$();
+}
+;
+var FORCE_CHECK_COMPLETE_HTML_0_g$ = null;
+var Lcom_google_gwt_safehtml_shared_SafeHtmlHostedModeUtils_2_classLit_0_g$ = mOd_g$('com.google.gwt.safehtml.shared', 'SafeHtmlHostedModeUtils', 1020, Ljava_lang_Object_2_classLit_0_g$);
 function $Cc_g$(){
   $Cc_g$ = Object;
   a_g$();
@@ -46710,6 +46803,11 @@ function EOf_g$(l_0_0_g$){
   return l_0_0_g$.isDisponible_0_g$()?'Oui':'Non';
 }
 
+function A8f_g$(action_0_0_g$, index_1_0_g$, livre_2_0_g$, valeur_3_0_g$){
+  xOf_g$();
+  action_0_0_g$.accept_5_g$(livre_2_0_g$);
+}
+
 Jxc_g$(2294, 1175, {863:1, 886:1, 1073:1, 1175:1, 1249:1, 1266:1, 1268:1, 1387:1, 1401:1, 2294:1, 2312:1, 1:1}, zOf_g$);
 _.$init_1574_g$ = function yOf_g$(){
   xOf_g$();
@@ -46718,7 +46816,17 @@ _.$init_1574_g$ = function yOf_g$(){
 ;
 _.lambda$4_1_g$ = function K_f_g$(livre_0_0_g$){
   xOf_g$();
-  this.presenter_2_g$.onEnregistrer_0_g$(livre_0_0_g$);
+  this.presenter_2_g$.onModifierClique_0_g$(livre_0_0_g$);
+}
+;
+_.lambda$5_0_g$ = function z8f_g$(livre_0_0_g$){
+  xOf_g$();
+  this.presenter_2_g$.onSupprimerClique_0_g$(livre_0_0_g$);
+}
+;
+_.lambda$7_0_g$ = function B8f_g$(l_0_0_g$){
+  xOf_g$();
+  this.presenter_2_g$.onEnregistrer_0_g$(l_0_0_g$);
 }
 ;
 _.afficherErreurFormulaire_0_g$ = function I_f_g$(message_0_g$){
@@ -46738,6 +46846,18 @@ _.ajouterColonne_0_g$ = function AOf_g$(entete_0_g$, valeur_0_g$){
   this.table_5_g$.addColumn_5_g$(new OOf_g$(this, valeur_0_g$), entete_0_g$);
 }
 ;
+_.ajouterColonneBouton_0_g$ = function x8f_g$(libelle_0_g$, action_0_g$){
+  xOf_g$();
+  var colonne_0_g$;
+  colonne_0_g$ = new F8f_g$(this, new k8f_g$, libelle_0_g$);
+  colonne_0_g$.setFieldUpdater_0_g$(new R8f_g$(action_0_g$));
+  this.table_5_g$.addColumn_0_g$(colonne_0_g$);
+}
+;
+_.confirmer_0_g$ = function y8f_g$(question_0_g$){
+  return OQc_g$(question_0_g$);
+}
+;
 _.fermerFormulaire_0_g$ = function J_f_g$(){
   this.formulaire_0_g$.fermer_0_g$();
 }
@@ -46748,14 +46868,16 @@ _.initColonnes_0_g$ = function COf_g$(){
   this.ajouterColonne_0_g$('Auteur', new TOf_g$);
   this.ajouterColonne_0_g$('Ann\xE9e', new $Of_g$);
   this.ajouterColonne_0_g$('Disponible', new ePf_g$);
+  this.ajouterColonneBouton_0_g$('Modifier', new O_f_g$(this));
+  this.ajouterColonneBouton_0_g$('Supprimer', new M8f_g$(this));
 }
 ;
 _.onAjouter_0_g$ = function FOf_g$(event_0_g$){
   this.presenter_2_g$.onAjouterClique_0_g$();
 }
 ;
-_.ouvrirFormulaire_0_g$ = function L_f_g$(){
-  this.formulaire_0_g$.ouvrir_0_g$(new O_f_g$(this));
+_.ouvrirFormulaire_1_g$ = function C8f_g$(livre_0_g$){
+  this.formulaire_0_g$.ouvrir_1_g$(livre_0_g$, new V8f_g$(this));
 }
 ;
 _.setPresenter_0_g$ = function GQf_g$(presenter_1_g$){
@@ -46843,6 +46965,33 @@ _.compose_0_g$ = function WOf_g$(before_0_g$){
 }
 ;
 var Lcom_toky_bibliotheque_BibliothequeView$1methodref$getAuteur$Type_2_classLit_0_g$ = mOd_g$('com.toky.bibliotheque', 'BibliothequeView/1methodref$getAuteur$Type', 2297, Ljava_lang_Object_2_classLit_0_g$);
+function D8f_g$(){
+  D8f_g$ = Object;
+  uAf_g$();
+}
+
+function F8f_g$(this$0_0_g$, $anonymous0_0_g$, val$libelle_0_g$){
+  D8f_g$();
+  this.this$01_115_g$ = this$0_0_g$;
+  this.val$libelle3_0_g$ = val$libelle_0_g$;
+  wAf_g$.call(this, $anonymous0_0_g$);
+  this.$init_1653_g$();
+}
+
+Jxc_g$(2389, 2208, {2145:1, 2208:1, 1229:1, 1238:1, 1247:1, 2389:1, 1:1}, F8f_g$);
+_.$init_1653_g$ = function E8f_g$(){
+  D8f_g$();
+}
+;
+_.getValue_2_g$ = function H8f_g$(livre_0_g$){
+  return this.getValue_5_g$(dvc_g$(livre_0_g$, 2285));
+}
+;
+_.getValue_5_g$ = function G8f_g$(livre_0_g$){
+  return this.val$libelle3_0_g$;
+}
+;
+var Lcom_toky_bibliotheque_BibliothequeView$2_2_classLit_0_g$ = mOd_g$('com.toky.bibliotheque', 'BibliothequeView/2', 2389, Lcom_google_gwt_user_cellview_client_Column_2_classLit_0_g$);
 function XOf_g$(){
   XOf_g$ = Object;
 }
@@ -46909,16 +47058,81 @@ function O_f_g$($$outer_0_0_g$){
   this.$$outer_0_100_g$ = $$outer_0_0_g$;
 }
 
-Jxc_g$(2355, 1, {2355:1, 2358:1, 1:1}, O_f_g$);
+Jxc_g$(2355, 1, {2355:1, 1:1, 1753:1}, O_f_g$);
 _.$init_1629_g$ = function N_f_g$(){
   M_f_g$();
 }
 ;
-_.onEnregistrer_0_g$ = function P_f_g$(arg0_0_g$){
-  this.$$outer_0_100_g$.lambda$4_1_g$(arg0_0_g$);
+_.accept_5_g$ = function I8f_g$(arg0_0_g$){
+  this.$$outer_0_100_g$.lambda$4_1_g$(dvc_g$(arg0_0_g$, 2285));
+}
+;
+_.andThen_4_g$ = function J8f_g$(after_0_g$){
+  return VBe_g$(this, after_0_g$);
 }
 ;
 var Lcom_toky_bibliotheque_BibliothequeView$lambda$4$Type_2_classLit_0_g$ = mOd_g$('com.toky.bibliotheque', 'BibliothequeView/lambda$4$Type', 2355, Ljava_lang_Object_2_classLit_0_g$);
+function K8f_g$(){
+  K8f_g$ = Object;
+}
+
+function M8f_g$($$outer_0_0_g$){
+  K8f_g$();
+  this.$$outer_0_101_g$ = $$outer_0_0_g$;
+}
+
+Jxc_g$(2390, 1, {2390:1, 1:1, 1753:1}, M8f_g$);
+_.$init_1654_g$ = function L8f_g$(){
+  K8f_g$();
+}
+;
+_.accept_5_g$ = function N8f_g$(arg0_0_g$){
+  this.$$outer_0_101_g$.lambda$5_0_g$(dvc_g$(arg0_0_g$, 2285));
+}
+;
+_.andThen_4_g$ = function O8f_g$(after_0_g$){
+  return VBe_g$(this, after_0_g$);
+}
+;
+var Lcom_toky_bibliotheque_BibliothequeView$lambda$5$Type_2_classLit_0_g$ = mOd_g$('com.toky.bibliotheque', 'BibliothequeView/lambda$5$Type', 2390, Ljava_lang_Object_2_classLit_0_g$);
+function P8f_g$(){
+  P8f_g$ = Object;
+}
+
+function R8f_g$(action_0_0_g$){
+  P8f_g$();
+  this.action_0_2_g$ = action_0_0_g$;
+}
+
+Jxc_g$(2391, 1, {2144:1, 2391:1, 1:1}, R8f_g$);
+_.$init_1655_g$ = function Q8f_g$(){
+  P8f_g$();
+}
+;
+_.update_1_g$ = function S8f_g$(arg0_0_g$, arg1_0_g$, arg2_0_g$){
+  A8f_g$(this.action_0_2_g$, arg0_0_g$, dvc_g$(arg1_0_g$, 2285), ovc_g$(arg2_0_g$));
+}
+;
+var Lcom_toky_bibliotheque_BibliothequeView$lambda$6$Type_2_classLit_0_g$ = mOd_g$('com.toky.bibliotheque', 'BibliothequeView/lambda$6$Type', 2391, Ljava_lang_Object_2_classLit_0_g$);
+function T8f_g$(){
+  T8f_g$ = Object;
+}
+
+function V8f_g$($$outer_0_0_g$){
+  T8f_g$();
+  this.$$outer_0_102_g$ = $$outer_0_0_g$;
+}
+
+Jxc_g$(2392, 1, {2392:1, 2358:1, 1:1}, V8f_g$);
+_.$init_1656_g$ = function U8f_g$(){
+  T8f_g$();
+}
+;
+_.onEnregistrer_0_g$ = function W8f_g$(arg0_0_g$){
+  this.$$outer_0_102_g$.lambda$7_0_g$(arg0_0_g$);
+}
+;
+var Lcom_toky_bibliotheque_BibliothequeView$lambda$7$Type_2_classLit_0_g$ = mOd_g$('com.toky.bibliotheque', 'BibliothequeView/lambda$7$Type', 2392, Ljava_lang_Object_2_classLit_0_g$);
 function iPf_g$(){
   iPf_g$ = Object;
   a_g$();
@@ -47412,16 +47626,20 @@ _.onAnnuler_0_g$ = function V_f_g$(event_0_g$){
 _.onEnregistrer_1_g$ = function W_f_g$(event_0_g$){
   var annee_0_g$, livre_0_g$;
   annee_0_g$ = dvc_g$(this.champAnnee_1_g$.getValue_1_g$(), 1508);
-  livre_0_g$ = new YJf_g$(null, JZd_g$(this.champTitre_1_g$.getValue_0_g$()), JZd_g$(this.champAuteur_1_g$.getValue_0_g$()), Mvc_g$(annee_0_g$)?0:annee_0_g$.intValue_1_g$(), NKd_g$(this.champDisponible_1_g$.getValue_6_g$()));
+  livre_0_g$ = new YJf_g$(this.idEnCours_0_g$, JZd_g$(this.champTitre_1_g$.getValue_0_g$()), JZd_g$(this.champAuteur_1_g$.getValue_0_g$()), Mvc_g$(annee_0_g$)?0:annee_0_g$.intValue_1_g$(), NKd_g$(this.champDisponible_1_g$.getValue_6_g$()));
   this.listener_2_g$.onEnregistrer_0_g$(livre_0_g$);
 }
 ;
-_.ouvrir_0_g$ = function X_f_g$(listener_0_g$){
+_.ouvrir_1_g$ = function X8f_g$(livre_0_g$, listener_0_g$){
+  var modification_0_g$;
   this.listener_2_g$ = listener_0_g$;
-  this.champTitre_1_g$.setValue_1_g$('');
-  this.champAuteur_1_g$.setValue_1_g$('');
-  this.champAnnee_1_g$.setValue_1_g$(null);
-  this.champDisponible_1_g$.setValue_6_g$(fLd_g$(true));
+  modification_0_g$ = Lvc_g$(livre_0_g$);
+  this.dialog_0_g$.setText_0_g$(modification_0_g$?'Modifier un livre':'Ajouter un livre');
+  this.idEnCours_0_g$ = modification_0_g$?livre_0_g$.getId_1_g$():null;
+  this.champTitre_1_g$.setValue_1_g$(modification_0_g$?livre_0_g$.getTitre_0_g$():'');
+  this.champAuteur_1_g$.setValue_1_g$(modification_0_g$?livre_0_g$.getAuteur_0_g$():'');
+  this.champAnnee_1_g$.setValue_1_g$(modification_0_g$?HRd_g$(livre_0_g$.getAnnee_0_g$()):null);
+  this.champDisponible_1_g$.setValue_6_g$(fLd_g$(modification_0_g$?livre_0_g$.isDisponible_0_g$():true));
   this.messageErreur_1_g$.setText_0_g$('');
   this.dialog_0_g$.center_0_g$();
   this.champTitre_1_g$.setFocus_0_g$(true);
@@ -48182,6 +48400,46 @@ _.getLivres_0_g$ = function tUf_g$(callback_0_g$){
   }
 }
 ;
+_.modifierLivre_0_g$ = function c9f_g$(livre_0_g$, callback_0_g$){
+  var ex_0_g$, helper_0_g$, streamWriter_0_g$;
+  helper_0_g$ = new VYc_g$(this, 'LivreService_Proxy', 'modifierLivre');
+  try {
+    streamWriter_0_g$ = helper_0_g$.start_5_g$(ovc_g$('com.toky.bibliotheque.LivreService'), 1);
+    streamWriter_0_g$.writeString_0_g$('com.toky.bibliotheque.Livre/3208369158');
+    streamWriter_0_g$.writeObject_0_g$(livre_0_g$);
+    helper_0_g$.finish_2_g$(callback_0_g$, (dZc_g$() , OBJECT_0_g$));
+  }
+   catch ($e0_0_g$) {
+    $e0_0_g$ = swc_g$($e0_0_g$);
+    if (tvc_g$($e0_0_g$, 1117)) {
+      ex_0_g$ = $e0_0_g$;
+      callback_0_g$.onFailure_1_g$(ex_0_g$);
+    }
+     else 
+      throw twc_g$($e0_0_g$);
+  }
+}
+;
+_.supprimerLivre_0_g$ = function d9f_g$(id_0_g$, callback_0_g$){
+  var ex_0_g$, helper_0_g$, streamWriter_0_g$;
+  helper_0_g$ = new VYc_g$(this, 'LivreService_Proxy', 'supprimerLivre');
+  try {
+    streamWriter_0_g$ = helper_0_g$.start_5_g$(ovc_g$('com.toky.bibliotheque.LivreService'), 1);
+    streamWriter_0_g$.writeString_0_g$('java.lang.Long/4227064769');
+    streamWriter_0_g$.writeObject_0_g$(id_0_g$);
+    helper_0_g$.finish_2_g$(callback_0_g$, (dZc_g$() , VOID_0_g$));
+  }
+   catch ($e0_0_g$) {
+    $e0_0_g$ = swc_g$($e0_0_g$);
+    if (tvc_g$($e0_0_g$, 1117)) {
+      ex_0_g$ = $e0_0_g$;
+      callback_0_g$.onFailure_1_g$(ex_0_g$);
+    }
+     else 
+      throw twc_g$($e0_0_g$);
+  }
+}
+;
 var REMOTE_SERVICE_INTERFACE_NAME_1_g$ = 'com.toky.bibliotheque.LivreService', SERIALIZATION_POLICY_1_g$ = '37A00C57B24CB2B5C370E4861E8E0CDD', SERIALIZER_1_g$;
 var Lcom_toky_bibliotheque_LivreService_1Proxy_2_classLit_0_g$ = mOd_g$('com.toky.bibliotheque', 'LivreService_Proxy', 2331, Lcom_google_gwt_user_client_rpc_impl_RemoteServiceProxy_2_classLit_0_g$);
 function uUf_g$(){
@@ -48458,17 +48716,34 @@ _.demarrer_0_g$ = function PQf_g$(){
 }
 ;
 _.onAjouterClique_0_g$ = function QQf_g$(){
-  this.view_2_g$.ouvrirFormulaire_0_g$();
+  this.view_2_g$.ouvrirFormulaire_1_g$(null);
 }
 ;
 _.onEnregistrer_0_g$ = function b2f_g$(livre_0_g$){
-  var erreur_0_g$;
+  var callback_0_g$, erreur_0_g$;
   erreur_0_g$ = Z1f_g$(livre_0_g$);
   if (Ovc_g$(erreur_0_g$, null)) {
     this.view_2_g$.afficherErreurFormulaire_0_g$(erreur_0_g$);
     return;
   }
-  this.service_1_g$.ajouterLivre_0_g$(livre_0_g$, new e2f_g$(this));
+  callback_0_g$ = new k9f_g$(this);
+  if (Mvc_g$(livre_0_g$.getId_1_g$())) {
+    this.service_1_g$.ajouterLivre_0_g$(livre_0_g$, callback_0_g$);
+  }
+   else {
+    this.service_1_g$.modifierLivre_0_g$(livre_0_g$, callback_0_g$);
+  }
+}
+;
+_.onModifierClique_0_g$ = function f9f_g$(livre_0_g$){
+  this.view_2_g$.ouvrirFormulaire_1_g$(livre_0_g$);
+}
+;
+_.onSupprimerClique_0_g$ = function g9f_g$(livre_0_g$){
+  if (!this.view_2_g$.confirmer_0_g$('Supprimer \xAB ' + livre_0_g$.getTitre_0_g$() + ' \xBB ?')) {
+    return;
+  }
+  this.service_1_g$.supprimerLivre_0_g$(livre_0_g$.getId_1_g$(), new e2f_g$(this));
 }
 ;
 var Lcom_toky_bibliotheque_LivresPresenter_2_classLit_0_g$ = mOd_g$('com.toky.bibliotheque', 'LivresPresenter', 2311, Ljava_lang_Object_2_classLit_0_g$);
@@ -48519,20 +48794,50 @@ _.$init_1640_g$ = function d2f_g$(){
   c2f_g$();
 }
 ;
-_.onSuccess_0_g$ = function h2f_g$(ajoute_0_g$){
-  this.onSuccess_5_g$(dvc_g$(ajoute_0_g$, 2285));
+_.onSuccess_0_g$ = function h2f_g$(rien_0_g$){
+  this.onSuccess_2_g$(dvc_g$(rien_0_g$, 1555));
 }
 ;
 _.onFailure_1_g$ = function f2f_g$(erreur_0_g$){
-  this.this$01_114_g$.view_2_g$.afficherErreurFormulaire_0_g$(erreur_0_g$.getMessage_0_g$());
+  this.this$01_114_g$.view_2_g$.afficherMessage_0_g$('Suppression impossible : ' + erreur_0_g$.getMessage_0_g$());
 }
 ;
-_.onSuccess_5_g$ = function g2f_g$(ajoute_0_g$){
-  this.this$01_114_g$.view_2_g$.fermerFormulaire_0_g$();
+_.onSuccess_2_g$ = function h9f_g$(rien_0_g$){
   this.this$01_114_g$.chargerLivres_1_g$();
 }
 ;
 var Lcom_toky_bibliotheque_LivresPresenter$2_2_classLit_0_g$ = mOd_g$('com.toky.bibliotheque', 'LivresPresenter/2', 2371, Ljava_lang_Object_2_classLit_0_g$);
+function i9f_g$(){
+  i9f_g$ = Object;
+  a_g$();
+}
+
+function k9f_g$(this$0_0_g$){
+  i9f_g$();
+  this.this$01_116_g$ = this$0_0_g$;
+  i_g$.call(this);
+  this.$init_1657_g$();
+}
+
+Jxc_g$(2393, 1, {1104:1, 2393:1, 1:1}, k9f_g$);
+_.$init_1657_g$ = function j9f_g$(){
+  i9f_g$();
+}
+;
+_.onSuccess_0_g$ = function n9f_g$(resultat_0_g$){
+  this.onSuccess_5_g$(dvc_g$(resultat_0_g$, 2285));
+}
+;
+_.onFailure_1_g$ = function l9f_g$(erreur_0_g$){
+  this.this$01_116_g$.view_2_g$.afficherErreurFormulaire_0_g$(erreur_0_g$.getMessage_0_g$());
+}
+;
+_.onSuccess_5_g$ = function m9f_g$(resultat_0_g$){
+  this.this$01_116_g$.view_2_g$.fermerFormulaire_0_g$();
+  this.this$01_116_g$.chargerLivres_1_g$();
+}
+;
+var Lcom_toky_bibliotheque_LivresPresenter$3_2_classLit_0_g$ = mOd_g$('com.toky.bibliotheque', 'LivresPresenter/3', 2393, Ljava_lang_Object_2_classLit_0_g$);
 function RQf_g$(){
   RQf_g$ = Object;
 }
@@ -61876,6 +62181,23 @@ _.toString_1_g$ = function zye_g$(){
 }
 ;
 var Ljava_util_StringJoiner_2_classLit_0_g$ = mOd_g$('java.util', 'StringJoiner', 1730, Ljava_lang_Object_2_classLit_0_g$);
+function UBe_g$(){
+  UBe_g$ = Object;
+}
+
+function VBe_g$(this$static_0_g$, after_0_g$){
+  Xjf_g$(after_0_g$);
+  return new _Be_g$(this$static_0_g$, after_0_g$);
+}
+
+function WBe_g$(this$static_0_g$, after_1_0_g$, t_1_0_g$){
+  {
+    this$static_0_g$.accept_5_g$(t_1_0_g$);
+    after_1_0_g$.accept_5_g$(t_1_0_g$);
+  }
+}
+
+var Ljava_util_function_Consumer_2_classLit_0_g$ = oOd_g$('java.util.function', 'Consumer');
 function ADe_g$(){
   ADe_g$ = Object;
 }
@@ -63084,6 +63406,6 @@ var gwtOnLoad = Bxc_g$;
 zxc_g$(hyc_g$);
 Dxc_g$('permProps', [[['locale', 'default'], ['user.agent', 'safari']]]);
 $sendStats('moduleStartup', 'moduleEvalEnd');gwtOnLoad(__gwtModuleFunction.__errFn, __gwtModuleFunction.__moduleName, __gwtModuleFunction.__moduleBase, __gwtModuleFunction.__softPermutationId,__gwtModuleFunction.__computePropValue);$sendStats('moduleStartup', 'end');$gwt && $gwt.permProps && __gwtModuleFunction.__moduleStartupDone($gwt.permProps);
-//# sourceMappingURL=http://127.0.0.1:9876/sourcemaps/bibliotheque/67EC9788533A5AAB2BCB20231DE11CFC_sourcemap.json 
+//# sourceMappingURL=http://127.0.0.1:9876/sourcemaps/bibliotheque/E789B1A9A0DEBCF3F625E5D1C1B18685_sourcemap.json 
 //# sourceURL=bibliotheque-0.js
 

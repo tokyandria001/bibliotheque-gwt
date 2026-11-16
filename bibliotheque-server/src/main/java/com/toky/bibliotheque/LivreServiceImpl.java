@@ -53,4 +53,21 @@ public class LivreServiceImpl extends RemoteServiceServlet implements LivreServi
         }
         return repository.ajouter(livre);
     }
+
+        @Override
+    public Livre modifierLivre(Livre livre) throws IllegalArgumentException {
+        if (livre.getId() == null) {
+            throw new IllegalArgumentException("Impossible de modifier un livre sans identifiant.");
+        }
+        String erreur = LivreValidator.valider(livre);
+        if (erreur != null) {
+            throw new IllegalArgumentException(erreur);
+        }
+        return repository.modifier(livre);
+    }
+
+    @Override
+    public void supprimerLivre(Long id) {
+        repository.supprimer(id);
+    }
 }
