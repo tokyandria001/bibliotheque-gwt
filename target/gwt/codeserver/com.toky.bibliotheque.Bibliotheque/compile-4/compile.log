@@ -1,0 +1,14 @@
+binding: user.agent=safari
+Compiling module com.toky.bibliotheque.Bibliotheque
+   Unification traversed 988 fields and methods and 547 types. 24 are considered part of the current module and 34 had all of their fields and methods traversed.
+   [WARN] Some stale types ([com.toky.bibliotheque.Bibliotheque$1MyHandler$1, com.toky.bibliotheque.Bibliotheque$1, com.toky.bibliotheque.Bibliotheque$1MyHandler, com.toky.bibliotheque.Bibliotheque$5, com.toky.bibliotheque.Bibliotheque$4, com.toky.bibliotheque.Bibliotheque$3, com.toky.bibliotheque.Bibliotheque$2]) were not reprocessed as was expected. This is either a compiler bug or a Generator has legitimately stopped creating these types.
+   Compiling 1 permutation
+      Compiling permutation 0...
+      Linking per-type JS with 24 new/changed types.
+      Source Maps Enabled
+   Compile of permutations succeeded
+   Compilation succeeded -- 2,987s
+Linking into C:\Users\toky8\projets\bibliotheque\target\gwt\codeserver\com.toky.bibliotheque.Bibliotheque\compile-4\war\bibliotheque; Writing extras to C:\Users\toky8\projets\bibliotheque\target\gwt\codeserver\com.toky.bibliotheque.Bibliotheque\compile-4\extras\bibliotheque
+   Link succeeded
+   Linking succeeded -- 0,220s
+3,376s total -- Compile completed

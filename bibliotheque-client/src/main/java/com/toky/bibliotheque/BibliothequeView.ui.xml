@@ -1,0 +1,24 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+
+  <ui:style>
+    .page { max-width: 900px; margin: 0 auto; padding: 24px; font-family: Arial, sans-serif; }
+    .titre { color: #2c3e50; margin-bottom: 4px; text-align: left; }
+    .sousTitre { color: #7f8c8d; margin-top: 0; margin-bottom: 24px; }
+    .barre { margin-bottom: 12px; }
+    .tableau { width: 100%; }
+  </ui:style>
+
+  <g:HTMLPanel styleName="{style.page}">
+    <h1 class="{style.titre}">Bibliothèque</h1>
+    <p class="{style.sousTitre}">Gestion du catalogue de livres</p>
+
+    <div class="{style.barre}">
+      <g:Button ui:field="boutonAjouter">Ajouter un livre</g:Button>
+    </div>
+
+    <c:CellTable ui:field="table" addStyleNames="{style.tableau}"/>
+  </g:HTMLPanel>
+
+</ui:UiBinder>
