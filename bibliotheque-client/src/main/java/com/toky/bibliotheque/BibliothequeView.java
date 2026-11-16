@@ -1,4 +1,4 @@
-package com.toky.bibliotheque; // ← même package que votre classe EntryPoint
+package com.toky.bibliotheque;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -12,24 +12,25 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
-public class BibliothequeView extends Composite {
+/**
+ * Vue : uniquement de l'affichage. Aucune logique métier ici.
+ */
+public class BibliothequeView extends Composite implements LivresPresenter.Display {
 
-    // Lien entre ce fichier Java et BibliothequeView.ui.xml
     interface Binder extends UiBinder<Widget, BibliothequeView> {}
     private static final Binder BINDER = GWT.create(Binder.class);
 
-    // Champs injectés depuis le XML (même nom que ui:field)
     @UiField CellTable<Livre> table;
     @UiField Button boutonAjouter;
+
+    private LivresPresenter presenter;
 
     public BibliothequeView() {
         initWidget(BINDER.createAndBindUi(this));
         initColonnes();
-        chargerLivres();
     }
 
     private void initColonnes() {
@@ -39,7 +40,6 @@ public class BibliothequeView extends Composite {
         ajouterColonne("Disponible", l -> l.isDisponible() ? "Oui" : "Non");
     }
 
-    // Petite méthode utilitaire pour éviter de répéter les classes anonymes
     private void ajouterColonne(String entete, Function<Livre, String> valeur) {
         table.addColumn(new TextColumn<Livre>() {
             @Override
@@ -49,18 +49,27 @@ public class BibliothequeView extends Composite {
         }, entete);
     }
 
-    private void chargerLivres() {
-        List<Livre> livres = Arrays.asList(
-            new Livre(1L, "Le Petit Prince", "Antoine de Saint-Exupéry", 1943, true),
-            new Livre(2L, "L'Étranger", "Albert Camus", 1942, false),
-            new Livre(3L, "Les Misérables", "Victor Hugo", 1862, true)
-        );
+    // ===== Implémentation de LivresPresenter.Display =====
+
+    @Override
+    public void setPresenter(LivresPresenter presenter) {
+        this.presenter = presenter;
+    }
+
+    @Override
+    public void afficherLivres(List<Livre> livres) {
         table.setRowData(livres);
     }
 
-    // Gestionnaire de clic déclaré par annotation
+    @Override
+    public void afficherMessage(String message) {
+        Window.alert(message);
+    }
+
+    // ===== Événements : on délègue au presenter =====
+
     @UiHandler("boutonAjouter")
     void onAjouter(ClickEvent event) {
-        Window.alert("Bientôt : le formulaire d'ajout !");
+        presenter.onAjouterClique();
     }
 }

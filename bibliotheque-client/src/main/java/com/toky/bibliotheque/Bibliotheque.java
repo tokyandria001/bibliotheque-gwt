@@ -10,6 +10,10 @@ public class Bibliotheque implements EntryPoint {
 
     @Override
     public void onModuleLoad() {
-        RootPanel.get().add(new BibliothequeView());
+        BibliothequeView view = new BibliothequeView();
+        LivresPresenter presenter = new LivresPresenter(view);
+
+        RootPanel.get().add(view);
+        presenter.demarrer();
     }
 }
