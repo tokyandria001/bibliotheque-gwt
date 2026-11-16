@@ -2,42 +2,55 @@ package com.toky.bibliotheque;
 
 import com.google.gwt.user.server.rpc.jakarta.RemoteServiceServlet;
 
-import java.util.ArrayList;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * Implémentation serveur du service des livres.
- * Pour l'instant les données sont stockées en mémoire (plus tard : base de données).
+ * Service RPC des livres : délègue l'accès aux données au LivreRepository.
  */
 @SuppressWarnings("serial")
 public class LivreServiceImpl extends RemoteServiceServlet implements LivreService {
 
-    private final List<Livre> livres = new CopyOnWriteArrayList<>();
-    private final AtomicLong prochainId = new AtomicLong(5);
+    private EntityManagerFactory emf;
+    private LivreRepository repository;
 
-    public LivreServiceImpl() {
-        livres.add(new Livre(1L, "Le Petit Prince", "Antoine de Saint-Exupéry", 1943, true));
-        livres.add(new Livre(2L, "L'Étranger", "Albert Camus", 1942, false));
-        livres.add(new Livre(3L, "Les Misérables", "Victor Hugo", 1862, true));
-        livres.add(new Livre(4L, "Germinal", "Émile Zola", 1885, true));
+    /** Appelé une seule fois au démarrage du servlet. */
+    @Override
+    public void init() {
+        emf = Persistence.createEntityManagerFactory("bibliotheque");
+        repository = new LivreRepository(emf);
+
+        // Données de départ si la base est vide
+        if (repository.compter() == 0) {
+            repository.ajouter(new Livre(null, "Le Petit Prince", "Antoine de Saint-Exupéry", 1943, true));
+            repository.ajouter(new Livre(null, "L'Étranger", "Albert Camus", 1942, false));
+            repository.ajouter(new Livre(null, "Les Misérables", "Victor Hugo", 1862, true));
+            repository.ajouter(new Livre(null, "Germinal", "Émile Zola", 1885, true));
+        }
+    }
+
+    /** Appelé à l'arrêt du serveur : on libère les connexions. */
+    @Override
+    public void destroy() {
+        if (emf != null) {
+            emf.close();
+        }
+        super.destroy();
     }
 
     @Override
     public List<Livre> getLivres() {
-        return new ArrayList<>(livres);
+        return repository.trouverTous();
     }
 
     @Override
     public Livre ajouterLivre(Livre livre) throws IllegalArgumentException {
-        // Validation côté serveur (mêmes règles que côté client)
         String erreur = LivreValidator.valider(livre);
         if (erreur != null) {
             throw new IllegalArgumentException(erreur);
         }
-        livre.setId(prochainId.getAndIncrement());
-        livres.add(livre);
-        return livre;
+        return repository.ajouter(livre);
     }
 }

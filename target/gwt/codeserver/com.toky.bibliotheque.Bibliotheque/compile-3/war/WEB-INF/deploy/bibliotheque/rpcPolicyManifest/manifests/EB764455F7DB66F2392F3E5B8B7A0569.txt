@@ -1,0 +1,2 @@
+serviceClass: com.toky.bibliotheque.LivreService
+path: DFCF81B4E61AC42A37D814A90802C6AE.gwt.rpc
