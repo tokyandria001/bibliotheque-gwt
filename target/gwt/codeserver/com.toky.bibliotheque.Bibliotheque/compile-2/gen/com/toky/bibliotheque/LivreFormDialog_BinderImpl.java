@@ -1,4 +1,4 @@
-// .ui.xml template last modified: 1794824215902
+// .ui.xml template last modified: 1794850851552
 package com.toky.bibliotheque;
 
 import com.google.gwt.core.client.GWT;
@@ -201,6 +201,7 @@ public class LivreFormDialog_BinderImpl implements UiBinder<com.google.gwt.user.
       // Creation section.
       final com.google.gwt.user.client.ui.TextBox champTitre = (com.google.gwt.user.client.ui.TextBox) GWT.create(com.google.gwt.user.client.ui.TextBox.class);
       // Setup section.
+      champTitre.setName("titre");
 
       this.owner.champTitre = champTitre;
 
@@ -247,6 +248,7 @@ public class LivreFormDialog_BinderImpl implements UiBinder<com.google.gwt.user.
       // Creation section.
       final com.google.gwt.user.client.ui.TextBox champAuteur = (com.google.gwt.user.client.ui.TextBox) GWT.create(com.google.gwt.user.client.ui.TextBox.class);
       // Setup section.
+      champAuteur.setName("auteur");
 
       this.owner.champAuteur = champAuteur;
 
@@ -293,6 +295,7 @@ public class LivreFormDialog_BinderImpl implements UiBinder<com.google.gwt.user.
       // Creation section.
       final com.google.gwt.user.client.ui.IntegerBox champAnnee = (com.google.gwt.user.client.ui.IntegerBox) GWT.create(com.google.gwt.user.client.ui.IntegerBox.class);
       // Setup section.
+      champAnnee.setName("annee");
 
       this.owner.champAnnee = champAnnee;
 
@@ -340,6 +343,7 @@ public class LivreFormDialog_BinderImpl implements UiBinder<com.google.gwt.user.
       final com.google.gwt.user.client.ui.CheckBox champDisponible = (com.google.gwt.user.client.ui.CheckBox) GWT.create(com.google.gwt.user.client.ui.CheckBox.class);
       // Setup section.
       champDisponible.setHTML(template_html1().asString());
+      champDisponible.setName("disponible");
 
       this.owner.champDisponible = champDisponible;
 

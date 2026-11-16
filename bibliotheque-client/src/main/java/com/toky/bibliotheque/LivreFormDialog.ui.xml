@@ -13,18 +13,18 @@
     <g:HTMLPanel styleName="{style.form}">
       <div class="{style.ligne}">
         <span class="{style.etiquette}">Titre</span>
-        <g:TextBox ui:field="champTitre"/>
+        <g:TextBox ui:field="champTitre" name="titre"/>
       </div>
       <div class="{style.ligne}">
         <span class="{style.etiquette}">Auteur</span>
-        <g:TextBox ui:field="champAuteur"/>
+        <g:TextBox ui:field="champAuteur" name="auteur"/>
       </div>
       <div class="{style.ligne}">
         <span class="{style.etiquette}">Année</span>
-        <g:IntegerBox ui:field="champAnnee"/>
+        <g:IntegerBox ui:field="champAnnee" name="annee "/>
       </div>
       <div class="{style.ligne}">
-        <g:CheckBox ui:field="champDisponible">Disponible</g:CheckBox>
+        <g:CheckBox ui:field="champDisponible" name="disponible">Disponible</g:CheckBox>
       </div>
 
       <g:Label ui:field="messageErreur" styleName="{style.erreur}"/>

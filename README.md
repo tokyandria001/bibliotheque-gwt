@@ -114,6 +114,15 @@ mvn test
 |---|---|---|
 | Tests unitaires (client) | `LivresPresenterTest` | Logique du presenter : chargement, ajout, modification, suppression, confirmation, gestion des erreurs serveur. Vue et service **mockés** avec Mockito ; les callbacks asynchrones sont capturés avec `ArgumentCaptor` pour simuler les réponses du serveur. |
 | Tests d'intégration (serveur) | `LivreRepositoryTest` | Vraies requêtes Hibernate sur une base **H2 en mémoire**, recréée vide pour chaque test (la base de l'application n'est jamais touchée). |
+| Tests end-to-end | `BibliothequeE2ETest` (module `bibliotheque-e2e`) | Parcours utilisateur réel dans Chromium piloté par **Playwright** : ajout, modification, suppression d'un livre et validation du formulaire. |
+
+Les tests end-to-end nécessitent que l'application soit lancée (voir « Lancer le projet »), puis :
+
+```bash
+mvn -f bibliotheque-e2e/pom.xml test
+# ou, pour voir le navigateur travailler :
+mvn -f bibliotheque-e2e/pom.xml test -Dvisible=true
+```
 
 ---
 
@@ -138,7 +147,6 @@ Le packaging Maven `gwt-app` ne lance par défaut que `gwt:test`. Le plugin Sure
 
 ## 🔭 Pistes d'amélioration
 
-- Tests end-to-end (Playwright) sur les parcours utilisateur
 - Navigation entre écrans avec Activities & Places (liste / détail, historique du navigateur)
 - Pagination et tri du tableau
 - Pool de connexions (HikariCP) et base PostgreSQL pour un usage en production
